@@ -1068,3 +1068,101 @@ ul {
         text-align: center;
     }
 }
+/* --- RESPONSIVITÉ MOBILE & TABLETTES --- */
+
+@media (max-width: 1024px) {
+    .hero-grid, 
+    .about-grid, 
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid, 
+    .portfolio-grid, 
+    .why-grid, 
+    .testimonials-grid, 
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid, 
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Afficher le bouton du menu hamburger */
+    .hamburger {
+        display: block !important;
+        z-index: 1001;
+    }
+
+    /* Menu mobile masqué par défaut sur le côté, s'affiche avec .active */
+    .nav-menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 75px);
+        background: var(--bg-dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 0;
+        transition: var(--transition);
+        border-top: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Passage en une seule colonne pour toutes les grilles principales */
+    .services-grid, 
+    .portfolio-grid, 
+    .why-grid, 
+    .testimonials-grid, 
+    .blog-grid, 
+    .team-grid, 
+    .process-steps,
+    .footer-grid,
+    .form-row,
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Réduction de la taille des titres pour éviter qu'ils ne débordent de l'écran */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaDev — Nous développons les solutions numériques de demain</title>
+    <meta name="description" content="InnovaDev est une agence de développement digital basée à Dakar, Sénégal : web, mobile, SaaS, Cloud & IA pour accélérer votre croissance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Logo InnovaDev" class="logo-img">
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#apropos" class="nav-link">À propos</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#realisations" class="nav-link">Réalisations</a>
+                <a href="#equipe" class="nav-link">Équipe</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Commencer un projet</a>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Animation sur le contenu principal -->
+                <div class="hero-content fade-up">
+                    <span class="section-subtitle">Agence de développement digital</span>
+                    <h1>Nous développons vos idées en solutions digitales performantes.</h1>
+                    <p>Innovation, développement web, applications mobiles, intelligence artificielle, cloud computing et transformation digitale pour accélérer votre croissance.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Commencer un projet</a>
+                        <a href="#services" class="btn btn-secondary">Découvrir nos services</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <h3>250+</h3>
+                            <p>Projets livrés</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h3>180+</h3>
+                            <p>Clients satisfaits</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h3>12+ ans</h3>
+                            <p>D'expertise</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation avec délai pour la carte de code -->
+                <div class="hero-code-card fade-up delay-200">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="code-title">deploy-service.ts</span>
+                    </div>
+                    <div class="code-body">
+                        <p><span class="kw">const</span> <span class="func">deployApp</span> = <span class="kw">async</span> () => {</p>
+                        <p>&nbsp;&nbsp;<span class="kw">const</span> stack = [<span class="str">'Cloud'</span>, <span class="str">'AI'</span>, <span class="str">'Web'</span>, <span class="str">'Mobile'</span>];</p>
+                        <p>&nbsp;&nbsp;<span class="kw">const</span> status = <span class="kw">await</span> InnovaDev.<span class="func">launch</span>({</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;quality: <span class="str">'100%'</span>,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;security: <span class="str">'High'</span>,</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;performance: <span class="str">'Optimized'</span></p>
+                        <p>&nbsp;&nbsp;});</p>
+                        <p>&nbsp;&nbsp;<span class="comment">// Transformation digitale réussie</span></p>
+                        <p>&nbsp;&nbsp;<span class="kw">return</span> status;</p>
+                        <p>};</p>
+                    </div>
+                    <div class="code-badges">
+                        <div class="badge-status"><i class="fa-solid fa-brain"></i> Modèle IA · actif</div>
+                        <div class="badge-status badge-status-blue"><i class="fa-solid fa-cloud"></i> Cloud · 99.98% uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="fade-up">
+                    <span class="section-subtitle">Notre histoire</span>
+                    <h2 class="section-title">Une décennie à transformer des idées en produits numériques durables.</h2>
+                    <p style="color: var(--text-muted); font-size: 1.05rem;">Fondée par une équipe d'ingénieurs et de designers, InnovaDev accompagne des entreprises de toutes tailles dans la conception de solutions logicielles robustes, élégantes et évolutives. Notre mission : rendre la technologie accessible, fiable et créatrice de valeur.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card fade-up">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h4>Innovation</h4>
+                        <p>Veille technologique permanente et adoption des meilleures pratiques.</p>
+                    </div>
+                    <div class="value-card fade-up delay-100">
+                        <i class="fa-solid fa-award"></i>
+                        <h4>Qualité & excellence</h4>
+                        <p>Code propre, testé, documenté et maintenable.</p>
+                    </div>
+                    <div class="value-card fade-up delay-200">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h4>Performance</h4>
+                        <p>Des produits rapides, optimisés et prêts à grandir.</p>
+                    </div>
+                    <div class="value-card fade-up delay-300">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Sécurité</h4>
+                        <p>Protection des données et conformité par conception.</p>
+                    </div>
+                    <div class="value-card fade-up delay-400">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h4>Transparence</h4>
+                        <p>Communication claire à chaque étape du projet.</p>
+                    </div>
+                    <div class="value-card fade-up delay-200">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <h4>Satisfaction client</h4>
+                        <p>Votre réussite est notre indicateur de performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why InnovaDev -->
+    <section class="section-padding" id="pourquoi" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;" class="fade-up">
+                <span class="section-subtitle">Atouts</span>
+                <h2 class="section-title">Un partenaire technique fiable, sur le long terme.</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card fade-up">
+                    <div class="why-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Expertise reconnue</h3>
+                    <p style="color: var(--text-muted);">12 ans sur des projets exigeants.</p>
+                </div>
+                <div class="why-card fade-up delay-100">
+                    <div class="why-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <h3>Équipe qualifiée</h3>
+                    <p style="color: var(--text-muted);">Ingénieurs et designers certifiés.</p>
+                </div>
+                <div class="why-card fade-up delay-200">
+                    <div class="why-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Technologies modernes</h3>
+                    <p style="color: var(--text-muted);">Un socle robuste, pensé pour durer.</p>
+                </div>
+                <div class="why-card fade-up">
+                    <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Délais respectés</h3>
+                    <p style="color: var(--text-muted);">Livraison à temps, sans compromis.</p>
+                </div>
+                <div class="why-card fade-up delay-100">
+                    <div class="why-icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h3>Solutions sur mesure</h3>
+                    <p style="color: var(--text-muted);">Conçues autour de vos besoins réels.</p>
+                </div>
+                <div class="why-card fade-up delay-200">
+                    <div class="why-icon"><i class="fa-solid fa-rotate"></i></div>
+                    <h3>Méthodologie Agile</h3>
+                    <p style="color: var(--text-muted);">Sprints courts, visibilité totale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;" class="fade-up">
+                <span class="section-subtitle">Nos expertises</span>
+                <h2 class="section-title">Des services complets, du concept au déploiement.</h2>
+                <p style="color: var(--text-muted);">Une expertise transversale couvrant l'ensemble du cycle de vie de vos produits digitaux.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div>
+                        <i class="fa-solid fa-globe service-icon"></i>
+                        <h3>Développement Web</h3>
+                        <p>Sites vitrines, plateformes web et applications sur mesure, rapides et accessibles.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-100">
+                    <div>
+                        <i class="fa-solid fa-mobile-screen service-icon"></i>
+                        <h3>Applications Mobiles</h3>
+                        <p>Applications iOS et Android natives ou cross-platform, performantes et intuitives.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-200">
+                    <div>
+                        <i class="fa-solid fa-cloud-sun service-icon"></i>
+                        <h3>SaaS & Applications métiers</h3>
+                        <p>ERP, CRM et plateformes SaaS conçus pour fluidifier vos opérations internes.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div>
+                        <i class="fa-solid fa-wand-magic-sparkles service-icon"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Interfaces élégantes, intuitives et centrées sur l'expérience utilisateur.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-100">
+                    <div>
+                        <i class="fa-solid fa-server service-icon"></i>
+                        <h3>Cloud Computing & DevOps</h3>
+                        <p>Infrastructures cloud scalables, CI/CD et automatisation des déploiements.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-200">
+                    <div>
+                        <i class="fa-solid fa-lock service-icon"></i>
+                        <h3>Cybersécurité</h3>
+                        <p>Audit, sécurisation des applications et protection de vos données sensibles.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up">
+                    <div>
+                        <i class="fa-solid fa-robot service-icon"></i>
+                        <h3>Intelligence Artificielle & Data</h3>
+                        <p>Machine learning, automatisation intelligente et analyse de données décisionnelle.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-100">
+                    <div>
+                        <i class="fa-solid fa-chart-line service-icon"></i>
+                        <h3>SEO & Marketing Digital</h3>
+                        <p>Visibilité, acquisition et stratégie de contenu pour générer des résultats mesurables.</p>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-200">
+                    <div>
+                        <i class="fa-solid fa-headset service-icon"></i>
+                        <h3>Maintenance & Consulting IT</h3>
+                        <p>Support continu, hébergement et accompagnement stratégique pour votre transformation digitale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding" id="processus" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="fade-up">
+                <span class="section-subtitle">Méthodologie</span>
+                <h2 class="section-title">Notre processus, étape par étape.</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-card fade-up">
+                    <div class="step-num">01</div>
+                    <h4>Découverte</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Objectifs et besoins.</p>
+                </div>
+                <div class="process-card fade-up delay-100">
+                    <div class="step-num">02</div>
+                    <h4>Analyse</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Périmètre du projet.</p>
+                </div>
+                <div class="process-card fade-up delay-200">
+                    <div class="step-num">03</div>
+                    <h4>Conception</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Maquettes UI/UX.</p>
+                </div>
+                <div class="process-card fade-up delay-300">
+                    <div class="step-num">04</div>
+                    <h4>Développement</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Implémentation itérative.</p>
+                </div>
+                <div class="process-card fade-up delay-400">
+                    <div class="step-num">05</div>
+                    <h4>Tests</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Qualité et sécurité.</p>
+                </div>
+                <div class="process-card fade-up delay-100">
+                    <div class="step-num">06</div>
+                    <h4>Déploiement</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Mise en production.</p>
+                </div>
+                <div class="process-card fade-up delay-200">
+                    <div class="step-num">07</div>
+                    <h4>Maintenance</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Support continu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-padding" id="realisations">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 30px;" class="fade-up">
+                <span class="section-subtitle">Portfolio</span>
+                <h2 class="section-title">Quelques réalisations récentes.</h2>
+            </div>
+            
+            <div class="portfolio-filter fade-up delay-100">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="Sites Web">Sites Web</button>
+                <button class="filter-btn" data-filter="Mobile">Mobile</button>
+                <button class="filter-btn" data-filter="E-commerce">E-commerce</button>
+                <button class="filter-btn" data-filter="Intelligence Artificielle">Intelligence Artificielle</button>
+                <button class="filter-btn" data-filter="Dashboards">Dashboards</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card fade-up" data-category="Sites Web">
+                    <div class="portfolio-img"><i class="fa-solid fa-building"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-cat">Sites Web</div>
+                        <h3 class="portfolio-title">Site institutionnel NovaCorp</h3>
+                        <div class="portfolio-stack">HTML5 · CSS3 · JavaScript</div>
+                        <a href="#" class="portfolio-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-up delay-100" data-category="Mobile">
+                    <div class="portfolio-img"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-cat">Mobile</div>
+                        <h3 class="portfolio-title">Application mobile FitTrack</h3>
+                        <div class="portfolio-stack">Flutter · Firebase</div>
+                        <a href="#" class="portfolio-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-up delay-200" data-category="E-commerce">
+                    <div class="portfolio-img"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-cat">E-commerce</div>
+                        <h3 class="portfolio-title">Boutique en ligne Marché+</h3>
+                        <div class="portfolio-stack">Next.js · Node.js · PostgreSQL</div>
+                        <a href="#" class="portfolio-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-up" data-category="Intelligence Artificielle">
+                    <div class="portfolio-img"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-cat">Intelligence Artificielle</div>
+                        <h3 class="portfolio-title">Plateforme prédictive PredictIQ</h3>
+                        <div class="portfolio-stack">Python · Machine Learning</div>
+                        <a href="#" class="portfolio-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-up delay-100" data-category="Dashboards">
+                    <div class="portfolio-img"><i class="fa-solid fa-gauge"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-cat">Dashboards</div>
+                        <h3 class="portfolio-title">Tableau de bord FlowMetrics</h3>
+                        <div class="portfolio-stack">React · MongoDB</div>
+                        <a href="#" class="portfolio-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-up delay-200" data-category="Sites Web">
+                    <div class="portfolio-img"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-cat">Sites Web</div>
+                        <h3 class="portfolio-title">Cabinet juridique Atelier Légal</h3>
+                        <div class="portfolio-stack">Laravel · PHP · MySQL</div>
+                        <a href="#" class="portfolio-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section-padding" id="technologies" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="fade-up">
+                <span class="section-subtitle">Stack Technique</span>
+                <h2 class="section-title">Les technologies que nous maîtrisons.</h2>
+            </div>
+            <div class="tech-badges fade-up delay-100">
+                <div class="tech-badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</div>
+                <div class="tech-badge"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS3</div>
+                <div class="tech-badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+                <div class="tech-badge"><i class="fa-brands fa-react" style="color: #61dafb;"></i> React</div>
+                <div class="tech-badge"><i class="fa-solid fa-N" style="color: #ffffff;"></i> Next.js</div>
+                <div class="tech-badge"><i class="fa-brands fa-node" style="color: #339933;"></i> Node.js</div>
+                <div class="tech-badge"><i class="fa-brands fa-laravel" style="color: #ff2d20;"></i> Laravel</div>
+                <div class="tech-badge"><i class="fa-brands fa-php" style="color: #777bb4;"></i> PHP</div>
+                <div class="tech-badge"><i class="fa-brands fa-python" style="color: #3776ab;"></i> Python</div>
+                <div class="tech-badge"><i class="fa-brands fa-java" style="color: #007396;"></i> Java</div>
+                <div class="tech-badge"><i class="fa-solid fa-mobile-button" style="color: #02569b;"></i> Flutter</div>
+                <div class="tech-badge"><i class="fa-brands fa-docker" style="color: #2496ed;"></i> Docker</div>
+                <div class="tech-badge"><i class="fa-solid fa-fire" style="color: #ffca28;"></i> Firebase</div>
+                <div class="tech-badge"><i class="fa-brands fa-aws" style="color: #ff9900;"></i> AWS</div>
+                <div class="tech-badge"><i class="fa-solid fa-database" style="color: #47a248;"></i> MongoDB</div>
+                <div class="tech-badge"><i class="fa-solid fa-database" style="color: #336791;"></i> PostgreSQL</div>
+                <div class="tech-badge"><i class="fa-solid fa-database" style="color: #00758f;"></i> MySQL</div>
+                <div class="tech-badge"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i> Git</div>
+                <div class="tech-badge"><i class="fa-brands fa-github" style="color: #ffffff;"></i> GitHub</div>
+                <div class="tech-badge"><i class="fa-brands fa-linux" style="color: #fcc624;"></i> Linux</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding" id="equipe">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;" class="fade-up">
+                <span class="section-subtitle">Notre Équipe</span>
+                <h2 class="section-title">Les personnes derrière vos projets.</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card fade-up">
+                    <div class="team-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3 class="team-name">Aïssatou Diallo</h3>
+                    <div class="team-role">Directrice Technique</div>
+                    <div class="team-spec">Architecture logicielle, cloud & DevOps.</div>
+                    <a href="#" class="portfolio-link" style="font-size: 0.8rem;">Voir le portfolio</a>
+                </div>
+                <div class="team-card fade-up delay-100">
+                    <div class="team-avatar"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="team-name">Karim Sow</h3>
+                    <div class="team-role">Lead Développeur Front-End</div>
+                    <div class="team-spec">React, performance web et accessibilité.</div>
+                    <a href="#" class="portfolio-link" style="font-size: 0.8rem;">Voir le portfolio</a>
+                </div>
+                <div class="team-card fade-up delay-200">
+                    <div class="team-avatar"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="team-name">Mariam Fall</h3>
+                    <div class="team-role">UI/UX Designer Senior</div>
+                    <div class="team-spec">Recherche utilisateur, design systems.</div>
+                    <a href="#" class="portfolio-link" style="font-size: 0.8rem;">Voir le portfolio</a>
+                </div>
+                <div class="team-card fade-up delay-300">
+                    <div class="team-avatar"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="team-name">Omar Bâ</h3>
+                    <div class="team-role">Ingénieur IA & Data</div>
+                    <div class="team-spec">Machine learning et analytics avancés.</div>
+                    <a href="#" class="portfolio-link" style="font-size: 0.8rem;">Voir le portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics / Stats Section -->
+    <section class="section-padding stats-section" id="chiffres">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-up">
+                    <h2 class="counter" data-target="250">0</h2>
+                    <p>Projets réalisés</p>
+                </div>
+                <div class="stat-card fade-up delay-100">
+                    <h2 class="counter" data-target="180">0</h2>
+                    <p>Clients satisfaits</p>
+                </div>
+                <div class="stat-card fade-up delay-200">
+                    <h2 class="counter" data-target="12">0</h2>
+                    <p>Années d'expérience</p>
+                </div>
+                <div class="stat-card fade-up delay-300">
+                    <h2 class="counter" data-target="15">0</h2>
+                    <p>Experts</p>
+                </div>
+                <div class="stat-card fade-up delay-400">
+                    <h2 class="counter" data-target="20">0</h2>
+                    <p>Technologies maîtrisées</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding" id="temoignages">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;" class="fade-up">
+                <span class="section-subtitle">Avis</span>
+                <h2 class="section-title">Ce que disent nos clients.</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-up">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">« L'équipe InnovaDev a livré notre plateforme avant l'échéance, avec une qualité de code remarquable. »</p>
+                    <div class="author">Fatou Ndiaye — Directrice, Médialink</div>
+                </div>
+                <div class="testimonial-card fade-up delay-100">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">« Un accompagnement transparent du début à la fin. Notre application mobile a dépassé nos attentes. »</p>
+                    <div class="author">Jean Mendy — CEO, UrbanFlow</div>
+                </div>
+                <div class="testimonial-card fade-up delay-200">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">« Une expertise technique réelle et une vraie écoute de nos besoins métier. Je recommande sans réserve. »</p>
+                    <div class="author">Aminata Cissé — COO, GreenLogix</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section-padding" id="blog" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;" class="fade-up">
+                <span class="section-subtitle">Actualités</span>
+                <h2 class="section-title">Derniers articles du blog.</h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card fade-up">
+                    <div class="blog-cat">Développement Web</div>
+                    <h3 class="blog-title">Pourquoi le rendu côté serveur revient en force en 2026</h3>
+                    <a href="#" class="portfolio-link">Lire l'article <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="blog-card fade-up delay-100">
+                    <div class="blog-cat">Intelligence Artificielle</div>
+                    <h3 class="blog-title">Intégrer l'IA générative dans vos outils métiers, sans risque</h3>
+                    <a href="#" class="portfolio-link">Lire l'article <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="blog-card fade-up delay-200">
+                    <div class="blog-cat">Cybersécurité</div>
+                    <h3 class="blog-title">5 réflexes essentiels pour sécuriser une application web</h3>
+                    <a href="#" class="portfolio-link">Lire l'article <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" id="faq">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 20px;" class="fade-up">
+                <span class="section-subtitle">Questions fréquentes</span>
+                <h2 class="section-title">Tout ce que vous devez savoir.</h2>
+            </div>
+            <div class="faq-accordion fade-up delay-100">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Combien de temps dure un projet type ?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Cela dépend de la complexité, mais un site vitrine prend généralement 3 à 6 semaines, et une application métier 2 à 4 mois.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Travaillez-vous avec des entreprises hors du Sénégal ?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, nous accompagnons des clients en Afrique, en Europe et en Amérique du Nord, en mode full remote.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Proposez-vous la maintenance après livraison ?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, nous proposons des contrats de maintenance évolutive, corrective et de l'hébergement managé.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment se déroule l'estimation budgétaire ?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Après un premier échange de découverte, nous fournissons un devis détaillé sous 48 à 72 heures.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quelles technologies utilisez-vous ?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Nous choisissons la stack la plus adaptée à chaque projet : React, Next.js, Node.js, Laravel, Flutter, etc.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;" class="fade-up">
+                <span class="section-subtitle">Contact</span>
+                <h2 class="section-title">Demandez votre devis gratuit.</h2>
+                <p style="color: var(--text-muted);">Décrivez votre besoin, nous vous répondons sous 24h ouvrées avec une première recommandation.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-card fade-up">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 24px;">Nos Coordonnées</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Adresse</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Avenue Cheikh Anta Diop, Dakar, Sénégal</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">+221 77 534 30 75</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">innovadev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong>Horaires</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Lun–Ven, 9h–18h GMT</p>
+                        </div>
+                    </div>
+
+                    <div class="socials">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-up delay-200">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="entreprise">Entreprise</label>
+                                <input type="text" id="entreprise" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget estimatif</label>
+                                <select id="budget" class="form-control">
+                                    <option value="">Sélectionnez un budget</option>
+                                    <option value="moins_75k">Moins de 75 000 CFA</option>
+                                    <option value="75k_100k">75 000–100 000 CFA</option>
+                                    <option value="100k_150k">100 000–150 000 CFA</option>
+                                    <option value="plus_150k">Plus de 150 000 CFA</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet *</label>
+                            <input type="text" id="sujet" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" rows="4" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
+                        <div class="form-feedback" id="formFeedback">
+                            Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container fade-up">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="Logo InnovaDev" class="logo-footer">
+                    </a>
+                    <p>Nous développons les solutions numériques de demain.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Développement Web</a></li>
+                        <li><a href="#services">Applications Mobiles</a></li>
+                        <li><a href="#services">Cloud & DevOps</a></li>
+                        <li><a href="#services">Intelligence Artificielle</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#equipe">Équipe</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Recevez nos actualités tech.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
+                        <input type="email" placeholder="Votre email" class="form-control" required style="padding: 10px 14px;">
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 16px;"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;"><i class="fa-solid fa-location-dot"></i> Dakar, Sénégal · contact@innovadev.com · +221 77 534 30 75</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© InnovaDev. Tous droits réservés.</div>
+                <div class="footer-bottom-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="scroll-top" id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -26,12 +26,22 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 h1, h2, h3, h4, .font-heading {
@@ -155,16 +165,15 @@ ul {
 
 /* Style et contrôle de la taille du logo */
 .logo-img {
-    height: 300px !important; 
-    width: auto !important;
-    max-height: none !important;
+    height: 48px;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
-    margin-bottom: 7%;
 }
 .logo-footer{
-    height: 200px;
+    height: 40px;
     width: auto;
-
+    max-width: 100%;
 }
 
 .nav-menu {
@@ -200,7 +209,7 @@ ul {
     background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98)), url('images/1.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Crée un effet de parallaxe fluide au scroll */
+    background-attachment: fixed; /* Effet de parallaxe sur desktop uniquement, voir media query */
 }
 
 /* --- NOUVELLES CLASSES D'ANIMATION --- */
@@ -996,32 +1005,86 @@ ul {
     visibility: visible;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* --- Tablettes (≤1024px) --- */
 @media (max-width: 1024px) {
-    .hero-grid, .about-grid, .contact-grid {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .services-grid, .portfolio-grid, .why-grid, .testimonials-grid, .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .contact-grid {
+        gap: 40px;
     }
 
-    .team-grid, .process-steps {
+    .services-grid,
+    .portfolio-grid,
+    .why-grid,
+    .testimonials-grid,
+    .blog-grid,
+    .team-grid,
+    .process-steps {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
 
     .stats-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .hero {
+        padding-top: 150px;
+        padding-bottom: 70px;
+    }
+
+    .section-title {
+        font-size: 2.1rem;
     }
 }
 
+/* --- Mobile / petites tablettes (≤768px) --- */
 @media (max-width: 768px) {
+    /* Le parallaxe "fixed" cause des bugs de rendu sur mobile/iOS : on le désactive */
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar.scrolled {
+        height: 64px;
+    }
+
+    .logo-img {
+        height: 36px;
+    }
+
     .hamburger {
         display: block;
+        z-index: 1001;
     }
 
     .nav-menu {
@@ -1033,91 +1096,9 @@ ul {
         background: var(--bg-dark);
         flex-direction: column;
         align-items: center;
-        padding: 40px 0;
-        transition: var(--transition);
-        border-top: 1px solid var(--border);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .services-grid, .portfolio-grid, .why-grid, .testimonials-grid, .blog-grid, .team-grid, .process-steps {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-    }
-}
-/* --- RESPONSIVITÉ MOBILE & TABLETTES --- */
-
-@media (max-width: 1024px) {
-    .hero-grid, 
-    .about-grid, 
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid, 
-    .portfolio-grid, 
-    .why-grid, 
-    .testimonials-grid, 
-    .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .team-grid, 
-    .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    /* Afficher le bouton du menu hamburger */
-    .hamburger {
-        display: block !important;
-        z-index: 1001;
-    }
-
-    /* Menu mobile masqué par défaut sur le côté, s'affiche avec .active */
-    .nav-menu {
-        position: fixed;
-        top: 75px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 75px);
-        background: var(--bg-dark);
-        flex-direction: column;
-        align-items: center;
         justify-content: flex-start;
-        padding: 40px 0;
+        gap: 8px;
+        padding: 32px 0;
         transition: var(--transition);
         border-top: 1px solid var(--border);
         box-shadow: var(--shadow);
@@ -1128,27 +1109,25 @@ ul {
         left: 0;
     }
 
-    /* Passage en une seule colonne pour toutes les grilles principales */
-    .services-grid, 
-    .portfolio-grid, 
-    .why-grid, 
-    .testimonials-grid, 
-    .blog-grid, 
-    .team-grid, 
-    .process-steps,
-    .footer-grid,
-    .form-row,
-    .stats-grid {
-        grid-template-columns: 1fr !important;
+    .nav-link {
+        padding: 12px 0;
+        font-size: 1.05rem;
     }
 
-    /* Réduction de la taille des titres pour éviter qu'ils ne débordent de l'écran */
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     .hero-btns {
@@ -1160,9 +1139,141 @@ ul {
         width: 100%;
     }
 
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        text-align: left;
+    }
+
+    .hero-code-card {
+        padding: 18px;
+    }
+
+    .code-body {
+        font-size: 0.78rem;
+        overflow-x: auto;
+    }
+
+    .section-padding {
+        padding: 56px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .why-grid,
+    .testimonials-grid,
+    .blog-grid,
+    .team-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .socials,
+    .newsletter-form {
+        justify-content: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .footer-links {
+        padding: 0;
+    }
+
+    .logo-footer {
+        height: 34px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .contact-info-card,
+    .contact-form {
+        padding: 24px;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* --- Petits mobiles (≤480px) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    .hero-stat-item:last-child {
+        grid-column: span 2;
+    }
+
+    .why-grid,
+    .services-grid {
+        gap: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-card,
+    .contact-form {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    .scroll-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
     }
 }

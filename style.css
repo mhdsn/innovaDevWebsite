@@ -58,9 +58,9 @@ ul {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 32px;
 }
 
 .section-padding {
@@ -70,7 +70,7 @@ ul {
 .section-subtitle {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--accent);
     margin-bottom: 12px;
@@ -78,7 +78,7 @@ ul {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -206,16 +206,20 @@ ul {
 }
 
 /* Hero Section */
-/* --- MISE À JOUR DE LA SECTION HERO --- */
 .hero {
-    padding-top: 180px;
-    padding-bottom: 100px;
+    /* Prend 100% de la hauteur de l'écran visible */
+    min-height: 100vh; 
+    /* Utilisation de Flexbox pour centrer le contenu verticalement */
+    display: flex;
+    align-items: center; 
+    padding-top: 90px; /* Compense la hauteur de ta navbar fixe */
     position: relative;
-    /* L'overlay en dégradé garantit que le texte blanc reste lisible sur l'image */
+    
+    /* Intégration de la nouvelle image de fond avec l'overlay sombre */
     background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98)), url('images/1.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Effet de parallaxe sur desktop uniquement, voir media query */
+    background-attachment: fixed;
 }
 
 /* --- NOUVELLES CLASSES D'ANIMATION --- */
@@ -238,25 +242,46 @@ ul {
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+.hero-centered {
+    max-width: 900px; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-centered .section-subtitle {
+    display: inline-block;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 4rem; 
     line-height: 1.15;
     margin-bottom: 24px;
     font-weight: 800;
 }
+.text-gradient {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
-    margin-bottom: 36px;
-    max-width: 540px;
+    margin-bottom: 40px;
+    max-width: 680px; 
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.hero-centered .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-btns {
@@ -265,12 +290,22 @@ ul {
     margin-bottom: 48px;
 }
 
+.hero-centered .hero-btns {
+    justify-content: center;
+}
+
 .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     border-top: 1px solid var(--border);
     padding-top: 32px;
+}
+
+.hero-centered .hero-stats {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero-stat-item h3 {
@@ -283,83 +318,6 @@ ul {
     font-size: 0.875rem;
     color: var(--text-muted);
     margin-bottom: 0;
-}
-
-/* Tech Code Display Card */
-.hero-code-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 24px;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-}
-
-.code-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-}
-
-.code-dots {
-    display: flex;
-    gap: 6px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-.dot-red { background: #ef4444; }
-.dot-yellow { background: #f59e0b; }
-.dot-green { background: #10b981; }
-
-.code-title {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-family: monospace;
-}
-
-.code-body {
-    font-family: 'Fira Code', monospace, sans-serif;
-    font-size: 0.9rem;
-    color: #e2e8f0;
-    line-height: 1.8;
-}
-
-.kw { color: #f43f5e; }
-.func { color: #60a5fa; }
-.str { color: #34d399; }
-.comment { color: #64748b; }
-
-.code-badges {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-}
-
-.badge-status {
-    background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.badge-status-blue {
-    background: rgba(6, 182, 212, 0.1);
-    color: var(--accent);
-    border: 1px solid rgba(6, 182, 212, 0.2);
 }
 
 /* About Section */
@@ -1163,7 +1121,6 @@ ul {
         padding: 0 20px;
     }
 
-    .hero-grid,
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1290,16 +1247,7 @@ ul {
     .hero-stats {
         grid-template-columns: repeat(3, 1fr);
         gap: 12px;
-        text-align: left;
-    }
-
-    .hero-code-card {
-        padding: 18px;
-    }
-
-    .code-body {
-        font-size: 0.78rem;
-        overflow-x: auto;
+        text-align: center;
     }
 
     .section-padding {

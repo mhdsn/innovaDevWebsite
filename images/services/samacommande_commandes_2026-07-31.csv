@@ -1,0 +1,13 @@
+﻿N°;Date;Client;Téléphone;Email;Statut;Paiement;Détail articles;Nb articles;Total (F CFA);Notes
+#0012;01/04/2026;bebe fa;"'4567890";;En attente;Orange Money;ghvg (x1) — 45 000 F;1;45000;
+
+;;;;;;;RÉCAPITULATIF;;
+;;;;;;;Commandes exportées;1;
+;;;;;;;Terminées;0;0
+;;;;;;;En attente / Confirmées;1;45000
+;;;;;;;Annulées;0;0
+
+;;;;;;;TOTAL GÉNÉRAL (F CFA);;45000
+
+;;;;;;;Exporté le 31/07/2026 à 19h26;;
+;;;;;;;SamaCommande — samacommande.app;;

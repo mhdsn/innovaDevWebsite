@@ -89,17 +89,48 @@ const animateCounters = () => {
 
 window.addEventListener('scroll', animateCounters);
 
-// Contact Form Submission
+// Contact Form Submission (Web3Forms)
 const contactForm = document.getElementById('contactForm');
 const formFeedback = document.getElementById('formFeedback');
+const contactSubmitBtn = document.getElementById('contactSubmitBtn');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    const originalBtnText = contactSubmitBtn.innerText;
+    contactSubmitBtn.innerText = 'Envoi en cours...';
+    contactSubmitBtn.disabled = true;
+
+    const formData = new FormData(contactForm);
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+            formFeedback.textContent = 'Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.';
+            formFeedback.style.color = '';
+            contactForm.reset();
+        } else {
+            formFeedback.textContent = "Une erreur s'est produite. Merci de réessayer ou de nous contacter directement par email.";
+            formFeedback.style.color = '#ef4444';
+        }
+    } catch (error) {
+        formFeedback.textContent = "Une erreur s'est produite. Merci de réessayer ou de nous contacter directement par email.";
+        formFeedback.style.color = '#ef4444';
+    }
+
     formFeedback.style.display = 'block';
-    contactForm.reset();
+    contactSubmitBtn.innerText = originalBtnText;
+    contactSubmitBtn.disabled = false;
+
     setTimeout(() => {
         formFeedback.style.display = 'none';
-    }, 5000);
+    }, 6000);
 });
 
 // Scroll to top button

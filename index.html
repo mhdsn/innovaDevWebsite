@@ -786,34 +786,39 @@
 
                 <div class="contact-form fade-up delay-200">
                     <form id="contactForm">
+                        <!-- Clé d'accès Web3Forms : à remplacer par la tienne (gratuite sur https://web3forms.com) -->
+                        <input type="hidden" name="access_key" value="1021be44-382e-463e-a9b2-8db4e63a8ed1">
+                        <!-- Piège anti-spam (doit rester vide et invisible) -->
+                        <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="prenom">Prénom *</label>
-                                <input type="text" id="prenom" class="form-control" required>
+                                <input type="text" id="prenom" name="prenom" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="nom">Nom *</label>
-                                <input type="text" id="nom" class="form-control" required>
+                                <input type="text" id="nom" name="nom" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="entreprise">Entreprise</label>
-                                <input type="text" id="entreprise" class="form-control">
+                                <input type="text" id="entreprise" name="entreprise" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email *</label>
-                                <input type="email" id="email" class="form-control" required>
+                                <input type="email" id="email" name="email" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="telephone">Téléphone</label>
-                                <input type="tel" id="telephone" class="form-control">
+                                <input type="tel" id="telephone" name="telephone" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="budget">Budget estimatif</label>
-                                <select id="budget" class="form-control">
+                                <select id="budget" name="budget" class="form-control">
                                     <option value="">Sélectionnez un budget</option>
                                     <option value="moins_75k">Moins de 75 000 CFA</option>
                                     <option value="75k_100k">75 000–100 000 CFA</option>
@@ -824,13 +829,13 @@
                         </div>
                         <div class="form-group">
                             <label for="sujet">Sujet *</label>
-                            <input type="text" id="sujet" class="form-control" required>
+                            <input type="text" id="sujet" name="subject" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" rows="4" class="form-control" required></textarea>
+                            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="contactSubmitBtn">Envoyer la demande</button>
                         <div class="form-feedback" id="formFeedback">
                             Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.
                         </div>
